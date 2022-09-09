@@ -20,9 +20,9 @@ tcs.drop(['Open', 'High', 'Low', 'Adj Close', 'Volume'], axis='columns', inplace
 nestle.drop(['Open', 'High', 'Low', 'Adj Close', 'Volume'], axis='columns', inplace=True)
 ultra.drop(['Open', 'High', 'Low', 'Adj Close', 'Volume'], axis='columns', inplace=True)
 tcs, nestle, ultra = tcs.dropna(), nestle.dropna(), ultra.dropna()
-tcs['Date'] = pd.to_datetime(tcs['Date'], format='%Y%m%d')
-nestle['Date'] = pd.to_datetime(nestle['Date'], format='%Y%m%d')
-ultra['Date'] = pd.to_datetime(ultra['Date'], format='%Y%m%d')
+tcs['Date'] = pd.to_datetime(tcs['Date'], format='%Y-%m-%d')
+nestle['Date'] = pd.to_datetime(nestle['Date'], format='%Y-%m-%d')
+ultra['Date'] = pd.to_datetime(ultra['Date'], format='%Y-%m-%d')
 tcs, nestle, ultra = tcs.set_index('Date'), nestle.set_index('Date'), ultra.set_index('Date')
 
 st.write('Indraneel Dey')
